@@ -18,6 +18,7 @@ def main():
     parser.add_argument('--train-seed', type=int, default=1)
     parser.add_argument('--num-timesteps', type=int, default=50000000)
     parser.add_argument('--output-dir', required=True, type=Path, help='Path where all output will be stored')
+    parser.add_argument('--percent', type=float, default=.5, help='Percent occlusion')
     args = parser.parse_args()
     output_dir = args.output_dir.expanduser()
 
@@ -37,6 +38,7 @@ def main():
         '--network', args.network,
         '--num_env', 8,
         '--save_path', str(output_dir / 'model.pkl'),
+        '--percent', args.percent,
     ]])
 
 

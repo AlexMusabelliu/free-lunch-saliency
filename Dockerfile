@@ -98,7 +98,7 @@ RUN pip install --user \
         tqdm==4.31.1 \
         urllib3==1.24.1 \
         Werkzeug==0.15.1 && \
-    pip install --user git+https://github.com/dniku/baselines.git@0b217d2
+    pip install --user git+https://github.com/AlexMusabelliu/baselines-fork.git
 
 # Somewhat counterintuitively, fewer threads = better performance
 ENV OMP_NUM_THREADS=4 \
