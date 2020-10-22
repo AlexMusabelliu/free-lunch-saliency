@@ -231,6 +231,7 @@ def load_model(experiment_path, seed):
         '--network', d['network'],
         '--num_env', 1,
         '--load_path', str(experiment_path / 'model.pkl'),
+        '--percent', d['percent']
     ]])
 
 
